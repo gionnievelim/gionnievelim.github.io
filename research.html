@@ -1,0 +1,51 @@
+---
+layout: default
+permalink: /research/
+title: Research
+---
+
+<div class="banner">
+  <div class="heading"><i class="fa fa-file-text-o"></i>Ideas and Investigations</div>
+
+  <div class="filter-button-group">
+    <span class="btn all active" data-filter="*">All</span>
+    <span class="btn" data-filter=".ongoing">Ongoing Projects</span>
+    <span class="btn" data-filter=".poster">Posters & LBWs</span>
+    <span class="btn" data-filter=".workshop">Workshop Papers</span>
+  </div>
+</div>
+
+<div class="grid">
+  {% for item in site.publications reversed %}
+  <div class="{{ item.categories }}">
+    <a>
+      <a href="{{ item.url }}">{{ item.title }}</a>, {{ item.type }}
+      {% if item.link != "" %}
+      <a href="{{ item.link }}" target="_blank"><i class="fa fa-file"></i></a> <!--fa-download-->
+      {% endif %}
+
+      {{ item.excerpt }}
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"
+  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
+
+<script>
+  var $grid = $(".grid").on(function () {
+    $grid.isotope({});
+  });
+  $(".filter-button-group").on("click", "span", function () {
+    var filterValue = $(this).attr("data-filter");
+    $grid.isotope({ filter: filterValue });
+  });
+  $(".btn").on("click", function () {
+    $(".btn").removeClass("active");
+    $(this).addClass("active");
+  });
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
