@@ -16,7 +16,7 @@
 
 #name { font-size: 1.5rem; font-weight: 700; }
 
-#sidebar { border-right: 5px solid #eceff4; padding: 4.5rem 2rem 1rem 2rem; font-size: .9rem; width: 270px; position: fixed; height: 100%; overflow: auto; }
+#sidebar { border-right: 5px solid #eceff4; padding: 4rem 3rem 1rem 1rem; font-size: .9rem; width: 270px; position: fixed; height: 100%; overflow: auto; }
 
 #sidebar > div { padding: .6rem 0; }
 
@@ -32,7 +32,7 @@
 
 #container { margin: 0 auto; max-width: 1000px; }
 
-img { max-width: 100%; max-height: 100%; border-radius: 2rem; }
+img { max-width: 100%; max-height: 100%; border-radius: 1rem; }
 
 html { font-size: 1em; height: 100%; font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif; }
 
